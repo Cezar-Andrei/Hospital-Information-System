@@ -1,0 +1,14 @@
+services:
+    admissions-service:
+        build:  ./admissions-service-ms/.
+        ports:  
+            - "8081:8081"
+    hr-service:
+        build:  ./hr-service/.
+        ports:  
+            - "8082:8082"
+    pathology-service:
+        build:  ./pathology-service/.
+        ports:  
+            - "8083:8083"
+    

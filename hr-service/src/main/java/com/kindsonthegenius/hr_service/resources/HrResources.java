@@ -26,12 +26,11 @@ public class HrResources {
 
     @RequestMapping("/employees/{Id}")
     public Employee getEmployeeById(@PathVariable("Id") String Id){
-        Employee e = employees.stream()
+        return employees.stream()
                 .filter(employee -> Id.equals(employee.getId()))
                 .findAny()
                 .orElse(null);
-                
-        return e;
+
     }
 
 }
